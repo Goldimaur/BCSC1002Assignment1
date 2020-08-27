@@ -36,4 +36,20 @@ public class Book {
         this.authorName = authorName;
         this.bookISBNNumber = bookISBNNumber;
     }
+
+    /**
+     * This method return author name of book .
+     *
+     * @return The author name of the books
+     */
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+
 }
