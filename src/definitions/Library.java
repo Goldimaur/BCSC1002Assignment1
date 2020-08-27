@@ -12,4 +12,18 @@ public class Library {
     public Library() {
         this.books = new Book[1000];
     }
+
+    /**
+     * This method return current book that are currently avilable book[] .
+     *
+     * @return This method return current book that are currently avilable book[] .
+     */
+
+    public Book[] getBooks() {
+        return books;
+    }
+
+    public void setBooks(Book[] books) {
+        this.books = books;
+    }
 }
