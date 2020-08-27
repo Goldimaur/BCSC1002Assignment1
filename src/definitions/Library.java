@@ -26,4 +26,8 @@ public class Library {
     public void setBooks(Book[] books) {
         this.books = books;
     }
+
+    public void addReturnedBook(String bookName) {
+        System.out.println(bookName + " has been returned seccessfully . ");
+    }
 }
