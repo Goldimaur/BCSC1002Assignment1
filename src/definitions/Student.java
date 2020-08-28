@@ -6,6 +6,9 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Student {
 
     private String[] nameOfStudent;
@@ -60,5 +63,34 @@ public class Student {
 
     public void setBooks(Book[] books) {
         this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "nameOfStudent=" + Arrays.toString(nameOfStudent) +
+                ", universityRollNumber=" + universityRollNumber +
+                ", numberOfBooksIssued=" + numberOfBooksIssued +
+                ", books=" + Arrays.toString(books) +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+        Student student = (Student) o;
+        return universityRollNumber == student.universityRollNumber &&
+                getNumberOfBooksIssued() == student.getNumberOfBooksIssued() &&
+                Arrays.equals(getNameOfStudent(), student.getNameOfStudent()) &&
+                Arrays.equals(getBooks(), student.getBooks());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(universityRollNumber, getNumberOfBooksIssued());
+        result = 31 * result + Arrays.hashCode(getNameOfStudent());
+        result = 31 * result + Arrays.hashCode(getBooks());
+        return result;
     }
 }

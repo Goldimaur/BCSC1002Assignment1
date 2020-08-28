@@ -34,13 +34,13 @@ public class Library {
     }
 
     public String toString() {
-        return String.format("List of Books : %s ", getBooks());
+        return String.format("List of Books : %s ", (Object) getBooks());
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Library)) return false;
         Library library = (Library) o;
         return Arrays.equals(getBooks(), library.getBooks());
     }
