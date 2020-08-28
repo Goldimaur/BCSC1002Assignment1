@@ -35,6 +35,20 @@ public class Student {
     }
 
     /**
+     * This method the university roll number of the student (long).
+     *
+     * @return the university roll number of the student (long).
+     */
+
+    public int getNumberOfBooksIssued() {
+        return numberOfBooksIssued;
+    }
+
+    public void setNumberOfBooksIssued(int numberOfBooksIssued) {
+        this.numberOfBooksIssued = numberOfBooksIssued;
+    }
+
+    /**
      * This method return the number of books issued by the student .
      *
      * @return the number of books issued by the student
