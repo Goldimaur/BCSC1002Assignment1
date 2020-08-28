@@ -14,6 +14,19 @@ public class Book {
     private String bookISBNNumber;
 
     /**
+     * This method returns book name , author name , book ISBN number .
+     *
+     * @param bookName       This return name of the book .
+     * @param authorName     This return author name of the book .
+     * @param bookISBNNumber This return ISBN number of the book .
+     */
+    public Book(String bookName, String authorName, String bookISBNNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.bookISBNNumber = bookISBNNumber;
+    }
+
+    /**
      * This method return name of book .
      *
      * @return The name of the books
@@ -26,19 +39,6 @@ public class Book {
     public void setBookName(String bookName) {
 
         this.bookName = bookName;
-    }
-
-    /**
-     * This method returns book name , author name , book ISBN number .
-     *
-     * @param bookName       This return name of the book .
-     * @param authorName     This return author name of the book .
-     * @param bookISBNNumber This return ISBN number of the book .
-     */
-    public Book(String bookName, String authorName, String bookISBNNumber) {
-        this.bookName = bookName;
-        this.authorName = authorName;
-        this.bookISBNNumber = bookISBNNumber;
     }
 
     /**

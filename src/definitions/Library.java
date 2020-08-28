@@ -33,6 +33,9 @@ public class Library {
         System.out.println(bookName + " has been returned seccessfully . ");
     }
 
+    public String toString() {
+        return String.format("List of Books : %s ", getBooks());
+    }
 
     @Override
     public boolean equals(Object o) {
