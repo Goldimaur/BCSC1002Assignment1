@@ -20,4 +20,17 @@ public class Student {
         this.books = new Book[numberOfBooksIssued];
     }
 
+    /**
+     * This method return the number of books issued by the student .
+     *
+     * @return the number of books issued by the student
+     */
+
+    public Book[] getBooks() {
+        return books;
+    }
+
+    public void setBooks(Book[] books) {
+        this.books = books;
+    }
 }
