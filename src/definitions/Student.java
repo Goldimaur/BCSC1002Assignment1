@@ -21,6 +21,20 @@ public class Student {
     }
 
     /**
+     * this method return the name of the student (first name, middle name, last name- all String).
+     *
+     * @return the name of the student (first name, middle name, last name- all String).
+     */
+
+    public String[] getNameOfStudent() {
+        return nameOfStudent;
+    }
+
+    public void setNameOfStudent(String[] nameOfStudent) {
+        this.nameOfStudent = nameOfStudent;
+    }
+
+    /**
      * This method return the number of books issued by the student .
      *
      * @return the number of books issued by the student
