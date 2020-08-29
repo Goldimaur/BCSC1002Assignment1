@@ -1,5 +1,5 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
+ *  User: Goldi Maurya .
  *  Date: 21/08/20
  *  Time: 3:50 PM
  *  File Name : Library.java
@@ -18,6 +18,10 @@ public class Library {
         }
     }
 
+    public Library(Book[] books) {
+        this.books = books;
+    }
+
     /**
      * This method return current book that are currently avilable book[] .
      *
@@ -25,7 +29,7 @@ public class Library {
      */
 
     public Book[] getBooks() {
-        return books;
+        return books.clone();
     }
 
     public void setBooks(Book[] books) {
