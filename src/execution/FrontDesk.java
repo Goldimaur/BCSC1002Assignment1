@@ -22,7 +22,7 @@ public class FrontDesk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int userInput;
-        Student student = new Student("Goldi ,Maurya", 191500306, 3);
+        Student student = new Student("Goldi Maurya", 191500306, 3);
         do {
             System.out.println("-=-=--=-=-Welcome To The Front Desk-=-=--=-=-");
             System.out.println("How may I help you today?");
