@@ -9,7 +9,6 @@ package definitions;
 import java.util.Arrays;
 import java.util.Objects;
 
-
 public class Student {
 
     private String[] nameOfStudent;
@@ -76,13 +75,7 @@ public class Student {
                 '}';
     }
 
-    public Book[] getBooks() {
-        return books;
-    }
 
-    public void setBooks(Book[] books) {
-        this.books = books;
-    }
 
     public void addNewBook(String bookName) {
         System.out.println(bookName + " has been successfully issued.");

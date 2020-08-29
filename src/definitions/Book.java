@@ -1,6 +1,6 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
+ *  User: Goldi Muryya
+ *  Date: 27/08/20
  *  Time: 3:49 PM
  *  File Name : Book.java
  * */
@@ -32,8 +32,8 @@ public class Book {
 
     public Book(String bookName) {
         this.bookName = bookName;
-        this.authorName = " ";
-        this.bookISBNNumber = "_____";
+        this.authorName = " DBMS  ";
+        this.bookISBNNumber = "1548965239575";
     }
 
     /**
