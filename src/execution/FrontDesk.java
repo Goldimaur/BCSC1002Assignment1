@@ -1,6 +1,6 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
+ *  User: Goldi Maurya
+ *  Date: 27/08/20
  *  Time: 3:50 PM
  *  File Name : FrontDesk.java
  * */
@@ -49,7 +49,7 @@ public class FrontDesk {
                     break;
 
                 case MY_ISSUED_BOOKS:
-                    student.getNumberOfBooksIssued();
+                    student.getBooks();
                     break;
                 default:
             }
