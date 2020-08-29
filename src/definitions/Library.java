@@ -36,7 +36,7 @@ public class Library {
         this.books = books;
     }
 
-    public void addReturnedBook(String bookName) {
+    public void returnedBook(String bookName) {
         System.out.println(bookName + " has been returned seccessfully . ");
     }
 
