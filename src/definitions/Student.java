@@ -9,6 +9,7 @@ package definitions;
 import java.util.Arrays;
 import java.util.Objects;
 
+
 public class Student {
 
     private String[] nameOfStudent;
@@ -74,6 +75,19 @@ public class Student {
                 ", books=" + Arrays.toString(books) +
                 '}';
     }
+
+    public Book[] getBooks() {
+        return books;
+    }
+
+    public void setBooks(Book[] books) {
+        this.books = books;
+    }
+
+    public void addNewBook(String bookName) {
+        System.out.println(bookName + " has been successfully issued.");
+    }
+
 
     @Override
     public boolean equals(Object o) {

@@ -12,6 +12,7 @@ import definitions.Student;
 
 import java.util.Scanner;
 
+
 public class FrontDesk {
     private static final int ADD_NEW_BOOK = 1;
     private static final int RETURN_BOOK = 2;
@@ -22,5 +23,40 @@ public class FrontDesk {
         Scanner scanner = new Scanner(System.in);
         int userInput;
         Student student = new Student("Goldi ,Maurya", 191500306, 3);
+        do {
+            System.out.println("-=-=--=-=-Welcome To The Front Desk-=-=--=-=-");
+            System.out.println("How may I help you today?");
+            System.out.println("1. Issue a new book for me: ");
+            System.out.println("2. Return a previously issued book for me: ");
+            System.out.println("3. Show me all my issued books: ");
+            System.out.println("4. Exit.");
+            System.out.println("Enter your choice (1..4): ");
+            userInput = scanner.nextInt();
+
+            switch (userInput) {
+                case ADD_NEW_BOOK:
+                    System.out.println("Enter the name of the book you want to read: ");
+                    scanner.nextLine();
+                    String bookName = scanner.nextLine();
+                    student.addNewBook(bookName);
+                    break;
+
+                case RETURN_BOOK:
+                    System.out.println("Enter the name of the book you want to return: ");
+                    scanner.nextLine();
+                    bookName = scanner.nextLine();
+                    student.addNewBook(bookName);
+                    break;
+
+                case MY_ISSUED_BOOKS:
+                    student.getNumberOfBooksIssued();
+                    break;
+                default:
+            }
+        }
+        while (userInput != EXIT);
+        {
+            scanner.close();
+        }
     }
 }
