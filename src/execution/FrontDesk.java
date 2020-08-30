@@ -8,7 +8,7 @@
 
 package execution;
 
-import definitions.Student;
+import definitions.Library;
 
 import java.util.Scanner;
 
@@ -22,7 +22,7 @@ public class FrontDesk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int userInput;
-        Student student = new Student("Goldi Maurya", 191500306, 3);
+        Library mylibrary = new Library();
         do {
             System.out.println("-=-=--=-=-Welcome To The Front Desk-=-=--=-=-");
             System.out.println("How may I help you today?");
@@ -38,18 +38,18 @@ public class FrontDesk {
                     System.out.println("Enter the name of the book you want to read: ");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
-                    student.addNewBook(bookName);
+                    mylibrary.issuedBook(bookName);
                     break;
 
                 case RETURN_BOOK:
                     System.out.println("Enter the name of the book you want to return: ");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
-                    student.addNewBook(bookName);
+                    mylibrary.returnedBook(bookName);
                     break;
 
                 case MY_ISSUED_BOOKS:
-                    student.getBooks();
+                    mylibrary.listOfBooksIssued();
                     break;
                 default:
             }
