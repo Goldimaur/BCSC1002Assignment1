@@ -13,8 +13,8 @@ public class Library {
 
     public Library() {
         this.allBooksCurrentlyAvailable = new Book[1000];
-        for (int i = 0; i < allBooksCurrentlyAvailable.length; i++) {
-            allBooksCurrentlyAvailable[i] = new Book("Books" + (i + 1));
+        for (int index = 0; index < allBooksCurrentlyAvailable.length; index++) {
+            allBooksCurrentlyAvailable[index] = new Book("Books" + (index + 1));
         }
     }
 
@@ -36,14 +36,6 @@ public class Library {
         this.allBooksCurrentlyAvailable = allBooksCurrentlyAvailable;
     }
 
-    public void returnedBook(String bookName) {
-        System.out.println(bookName + " has been returned seccessfully . ");
-    }
-
-    public String toString() {
-        return String.format("List of Books : %s ", (Object) getAllBooksCurrentlyAvailable());
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -58,12 +50,20 @@ public class Library {
     }
 
     public void issuedBook(String bookName) {
-        System.out.println(bookName + "book been should to you");
+        System.out.println(bookName + "book has been issued to you successfully .");
     }
 
-    public void listOfBooks() {
+    public void listOfBooksIssued() {
         for (Book book : allBooksCurrentlyAvailable) {
             System.out.println(book);
         }
+    }
+
+    public void returnedBook(String bookName) {
+        System.out.println(bookName + " has been returned successfully . ");
+    }
+
+    public String toString() {
+        return String.format("List of Books : %s ", (Object) getAllBooksCurrentlyAvailable());
     }
 }
