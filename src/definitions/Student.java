@@ -85,11 +85,6 @@ public class Student {
     }
 
 
-    public void addNewBook(String bookName) {
-        System.out.println(bookName + " has been successfully issued.");
-    }
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
