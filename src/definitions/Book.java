@@ -1,5 +1,5 @@
 /*  Created by IntelliJ IDEA.
- *  User: Goldi Muryya
+ *  User: Goldi Maurya
  *  Date: 27/08/20
  *  Time: 3:49 PM
  *  File Name : Book.java
@@ -11,19 +11,19 @@ import java.util.Objects;
 public class Book {
     private String bookName;
     private String authorName;
-    private String bookISBNNumber;
+    private String thirteenDigitISBNNumber;
 
     /**
      * This method returns book name , author name , book ISBN number .
      *
-     * @param bookName       This return name of the book .
-     * @param authorName     This return author name of the book .
-     * @param bookISBNNumber This return ISBN number of the book .
+     * @param bookName                This return name of the book .
+     * @param authorName              This return author name of the book .
+     * @param thirteenDigitISBNNumber This return ISBN number of the book .
      */
-    public Book(String bookName, String authorName, String bookISBNNumber) {
+    public Book(String bookName, String authorName, String thirteenDigitISBNNumber) {
         this.bookName = bookName;
         this.authorName = authorName;
-        this.bookISBNNumber = bookISBNNumber;
+        this.thirteenDigitISBNNumber = thirteenDigitISBNNumber;
     }
 
     public Book() {
@@ -33,7 +33,7 @@ public class Book {
     public Book(String bookName) {
         this.bookName = bookName;
         this.authorName = " DBMS  ";
-        this.bookISBNNumber = "1548965239575";
+        this.thirteenDigitISBNNumber = "1548965239575";
     }
 
     /**
@@ -73,19 +73,19 @@ public class Book {
      * @return The ISBN number of the books
      */
 
-    public String getBookISBNNumber() {
+    public String getThirteenDigitISBNNumber() {
 
-        return bookISBNNumber;
+        return thirteenDigitISBNNumber;
     }
 
-    public void setBookISBNNumber(String bookISBNNumber) {
+    public void setThirteenDigitISBNNumber(String thirteenDigitISBNNumber) {
 
-        this.bookISBNNumber = bookISBNNumber;
+        this.thirteenDigitISBNNumber = thirteenDigitISBNNumber;
     }
 
     @Override
     public String toString() {
-        return String.format("bookName :%s , AuthorName: %s , bookISBNNumber : %s ", getBookName(), getAuthorName(), getBookISBNNumber()
+        return String.format("bookName :%s , AuthorName: %s , bookISBNNumber : %s ", getBookName(), getAuthorName(), getThirteenDigitISBNNumber()
         );
     }
 
@@ -96,11 +96,11 @@ public class Book {
         Book book = (Book) o;
         return Objects.equals(getBookName(), book.getBookName()) &&
                 Objects.equals(getAuthorName(), book.getAuthorName()) &&
-                Objects.equals(getBookISBNNumber(), book.getBookISBNNumber());
+                Objects.equals(getThirteenDigitISBNNumber(), book.getThirteenDigitISBNNumber());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getBookName(), getAuthorName(), getBookISBNNumber());
+        return Objects.hash(getBookName(), getAuthorName(), getThirteenDigitISBNNumber());
     }
 }
