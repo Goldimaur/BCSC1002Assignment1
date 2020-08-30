@@ -9,17 +9,17 @@ package definitions;
 import java.util.Arrays;
 
 public class Library {
-    private Book[] books;
+    private Book[] allBooksCurrentlyAvailable;
 
     public Library() {
-        this.books = new Book[1000];
-        for (int i = 0; i < books.length; i++) {
-            books[i] = new Book("Books" + (i + 1));
+        this.allBooksCurrentlyAvailable = new Book[1000];
+        for (int i = 0; i < allBooksCurrentlyAvailable.length; i++) {
+            allBooksCurrentlyAvailable[i] = new Book("Books" + (i + 1));
         }
     }
 
-    public Library(Book[] books) {
-        this.books = books;
+    public Library(Book[] allBooksCurrentlyAvailable) {
+        this.allBooksCurrentlyAvailable = allBooksCurrentlyAvailable;
     }
 
     /**
@@ -28,12 +28,12 @@ public class Library {
      * @return This method return current book that are currently avilable book[] .
      */
 
-    public Book[] getBooks() {
-        return books.clone();
+    public Book[] getAllBooksCurrentlyAvailable() {
+        return allBooksCurrentlyAvailable.clone();
     }
 
-    public void setBooks(Book[] books) {
-        this.books = books;
+    public void setAllBooksCurrentlyAvailable(Book[] allBooksCurrentlyAvailable) {
+        this.allBooksCurrentlyAvailable = allBooksCurrentlyAvailable;
     }
 
     public void returnedBook(String bookName) {
@@ -41,7 +41,7 @@ public class Library {
     }
 
     public String toString() {
-        return String.format("List of Books : %s ", (Object) getBooks());
+        return String.format("List of Books : %s ", (Object) getAllBooksCurrentlyAvailable());
     }
 
     @Override
@@ -49,12 +49,12 @@ public class Library {
         if (this == o) return true;
         if (!(o instanceof Library)) return false;
         Library library = (Library) o;
-        return Arrays.equals(getBooks(), library.getBooks());
+        return Arrays.equals(getAllBooksCurrentlyAvailable(), library.getAllBooksCurrentlyAvailable());
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(getBooks());
+        return Arrays.hashCode(getAllBooksCurrentlyAvailable());
     }
 
     public void issuedBook(String bookName) {
@@ -62,7 +62,7 @@ public class Library {
     }
 
     public void listOfBooks() {
-        for (Book book : books) {
+        for (Book book : allBooksCurrentlyAvailable) {
             System.out.println(book);
         }
     }
