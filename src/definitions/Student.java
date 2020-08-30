@@ -11,16 +11,16 @@ import java.util.Objects;
 
 public class Student {
 
-    private String[] nameOfStudent;
+    private String[] nameOfStudentFormatFirstMiddleLast;
     private long universityRollNumber;
     private int numberOfBooksIssued;
-    private Book[] books;
+    private Book[] nameOfBooksIssued;
 
     public Student(String nameOfTheStudent, long universityRollNumber, int numberOfBooksIssued) {
-        this.nameOfStudent = nameOfTheStudent.split(" ");
+        this.nameOfStudentFormatFirstMiddleLast = nameOfTheStudent.split(" ");
         this.universityRollNumber = universityRollNumber;
         this.numberOfBooksIssued = numberOfBooksIssued;
-        this.books = new Book[numberOfBooksIssued];
+        this.nameOfBooksIssued = new Book[numberOfBooksIssued];
     }
 
     /**
@@ -29,12 +29,20 @@ public class Student {
      * @return the name of the student (first name, middle name, last name- all String).
      */
 
-    public String[] getNameOfStudent() {
-        return nameOfStudent;
+    public String[] getNameOfStudentFormatFirstMiddleLast() {
+        return nameOfStudentFormatFirstMiddleLast;
     }
 
-    public void setNameOfStudent(String[] nameOfStudent) {
-        this.nameOfStudent = nameOfStudent;
+    public void setNameOfStudentFormatFirstMiddleLast(String[] nameOfStudentFormatFirstMiddleLast) {
+        this.nameOfStudentFormatFirstMiddleLast = nameOfStudentFormatFirstMiddleLast;
+    }
+
+    public long getUniversityRollNumber() {
+        return universityRollNumber;
+    }
+
+    public void setUniversityRollNumber(long universityRollNumber) {
+        this.universityRollNumber = universityRollNumber;
     }
 
     /**
@@ -57,24 +65,24 @@ public class Student {
      * @return the number of books issued by the student
      */
 
-    public Book[] getBooks() {
-        return books;
+    public Book[] getNameOfBooksIssued() {
+        return nameOfBooksIssued;
     }
 
-    public void setBooks(Book[] books) {
-        this.books = books;
+    public void setNameOfBooksIssued(Book[] nameOfBooksIssued) {
+        this.nameOfBooksIssued = nameOfBooksIssued;
     }
+
 
     @Override
     public String toString() {
         return "Student{" +
-                "nameOfStudent=" + Arrays.toString(nameOfStudent) +
+                "nameOfStudent=" + Arrays.toString(nameOfStudentFormatFirstMiddleLast) +
                 ", universityRollNumber=" + universityRollNumber +
                 ", numberOfBooksIssued=" + numberOfBooksIssued +
-                ", books=" + Arrays.toString(books) +
+                ", books=" + Arrays.toString(nameOfBooksIssued) +
                 '}';
     }
-
 
 
     public void addNewBook(String bookName) {
@@ -87,17 +95,17 @@ public class Student {
         if (this == o) return true;
         if (!(o instanceof Student)) return false;
         Student student = (Student) o;
-        return universityRollNumber == student.universityRollNumber &&
+        return getUniversityRollNumber() == student.getUniversityRollNumber() &&
                 getNumberOfBooksIssued() == student.getNumberOfBooksIssued() &&
-                Arrays.equals(getNameOfStudent(), student.getNameOfStudent()) &&
-                Arrays.equals(getBooks(), student.getBooks());
+                Arrays.equals(getNameOfStudentFormatFirstMiddleLast(), student.getNameOfStudentFormatFirstMiddleLast()) &&
+                Arrays.equals(getNameOfBooksIssued(), student.getNameOfBooksIssued());
     }
 
     @Override
     public int hashCode() {
         int result = Objects.hash(universityRollNumber, getNumberOfBooksIssued());
-        result = 31 * result + Arrays.hashCode(getNameOfStudent());
-        result = 31 * result + Arrays.hashCode(getBooks());
+        result = 31 * result + Arrays.hashCode(getNameOfStudentFormatFirstMiddleLast());
+        result = 31 * result + Arrays.hashCode((nameOfBooksIssued));
         return result;
     }
 }
